@@ -1,1 +1,29 @@
-<p>header works!</p>
+<mat-toolbar color="accent">
+  <mat-toolbar-row>
+    <div>
+      <span>Kroeger - Treinamento e Consultoria</span>
+    </div>
+
+    <div *ngIf="larguraDaTela > 600" style="margin-left: auto;">
+      <button mat-button aria-label="Example icon-button with heart icon">
+        Início
+      </button>
+
+      <button mat-button aria-label="Example icon-button with heart icon">
+        Serviços
+      </button>
+
+      <button mat-button aria-label="Example icon-button with heart icon">
+        Contratar agora
+      </button>
+
+      <button mat-button aria-label="Example icon-button with heart icon">
+        Sobre nós
+      </button>
+
+      <button mat-button aria-label="Example icon-button with heart icon">
+        Dúvidas frequentes
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
