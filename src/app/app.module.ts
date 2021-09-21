@@ -1,3 +1,4 @@
+import { ProductsService } from './components/services/products/products.service';
 import { AuthService } from './modules/user/auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
@@ -17,9 +17,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HomeComponent } from './components/home/home.component';
+import { MatCardModule } from '@angular/material/card';
+import { BuyProductComponent } from './components/buy-product/buy-product.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BodyComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, BuyProductComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -31,8 +34,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ToastrModule.forRoot(),
     HttpClientModule,
     MatProgressSpinnerModule,
+    MatCardModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, ProductsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

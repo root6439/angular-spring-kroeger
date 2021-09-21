@@ -19,5 +19,25 @@
       "confirmarSenha": "1234567",
       "id": 9
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Consultoria para empresas",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue ex, pellentesque non diam quis, vehicula consequat dui. Etiam eleifend tortor ac orci aliquam tristique. ",
+      "price": 499.00
+    },
+    {
+      "id": 2,
+      "title": "Treinamento pessoal",
+      "description": "Este serviço tem foco no desenvolvimento pessoal, aplica-se a pessoas que queiram aprender coisas novas bla bla",
+      "price": 349.00
+    },
+    {
+      "id": 3,
+      "title": "Treinamento coletivo",
+      "description": "Treinamento para várias pessoas com duração de 6 meses bla bla bla",
+      "price": 899.00
+    }
   ]
 }

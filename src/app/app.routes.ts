@@ -1,8 +1,9 @@
-import { BodyComponent } from './components/body/body.component';
+import { HomeComponent } from './components/home/home.component';
+
 import { Routes } from '@angular/router';
 
 export const ROUTES: Routes = [
-  { path: '', component: BodyComponent },
+  { path: '', component: HomeComponent },
   {
     path: 'user',
     loadChildren: () =>
