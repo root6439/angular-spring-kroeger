@@ -2,7 +2,6 @@ import { AuthService } from './../auth.service';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { ThrowStmt } from '@angular/compiler';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -41,20 +40,20 @@ export class CreateUserComponent {
     private toastr: ToastrService
   ) {}
 
-  createUser() {
-    this.loading = true;
-    this.authService.createUser(this.formNewUser.value).subscribe(
-      () => {
-        this.toastr.success('Sucesso!', 'Usuário criado');
-        this.loading = false;
-      },
-      (err: HttpErrorResponse) => {
-        console.log(err);
-        this.toastr.error('Erro!', 'Não foi possível realizar o cadastro');
-        this.loading = false;
-      }
-    );
-  }
+  // createUser() {
+  //   this.loading = true;
+  //   this.authService.createUser(this.formNewUser.value).subscribe(
+  //     () => {
+  //       this.toastr.success('Sucesso!', 'Usuário criado');
+  //       this.loading = false;
+  //     },
+  //     (err: HttpErrorResponse) => {
+  //       console.log(err);
+  //       this.toastr.error('Erro!', 'Não foi possível realizar o cadastro');
+  //       this.loading = false;
+  //     }
+  //   );
+  // }
 
   verifyInputPassword(group: FormGroup) {}
 }

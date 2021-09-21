@@ -3,7 +3,7 @@
     <mat-card class="card-servico">
       <mat-card-header>
         <mat-card-title class="text-center">
-          {{product.title}}
+          {{ product.title }}
         </mat-card-title>
       </mat-card-header>
       <img
@@ -12,14 +12,14 @@
         class="rounded mx-auto d-block"
       />
       <mat-card-content class="mt-1">
-        {{product.description}}
+        {{ product.description }}
       </mat-card-content>
       <mat-card-actions>
         <button mat-flat-button color="accent" class="button-large">
           <mat-icon>assignment_turned_in</mat-icon>
           Contratar agora
         </button>
-        <h2 class="text-center"> {{product.price | currency:'BRL'}} </h2>
+        <h2 class="text-center">{{ product.price | currency: "BRL" }}</h2>
       </mat-card-actions>
     </mat-card>
   </div>
