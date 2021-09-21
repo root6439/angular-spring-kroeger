@@ -96,10 +96,16 @@
             </div>
           </div>
 
-          <button mat-raised-button color="accent" type="submit">
-            Criar usuário
-          </button>
-          <button mat-raised-button>Cancelar</button>
+          <div *ngIf="loading != true; else spinner">
+            <button mat-raised-button color="accent" type="submit" [disabled]="formNewUser.invalid">
+              Criar usuário
+            </button>
+            <button mat-raised-button>Cancelar</button>
+          </div>
+
+          <ng-template #spinner>
+            <mat-spinner color="accent" diameter="35"></mat-spinner>
+          </ng-template>
         </form>
       </mat-card-content>
     </mat-card>

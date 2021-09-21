@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nicolas Soares",
+      "cpf": "10553687956",
+      "email": "nicolas.soaresh.98@gmail.com",
+      "phone": "48984689248",
+      "username": "root6439",
+      "password": "1234567"
+    },
+    {
+      "nome": "Caroline Kroeger",
+      "cpfCnpj": "10294668900",
+      "email": "caroline.kroeger@gmail.com",
+      "telefone": "48991875710",
+      "nomeDeUsuario": "kgcarol",
+      "senha": "1234567",
+      "confirmarSenha": "1234567",
+      "id": 9
+    }
+  ]
+}

@@ -1,12 +1,9 @@
+import { AuthService } from './../auth.service';
 import { Component } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormGroupDirective,
-  NgForm,
-  Validators,
-} from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { ThrowStmt } from '@angular/compiler';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-create-user',
@@ -15,7 +12,9 @@ import { ErrorStateMatcher } from '@angular/material/core';
 })
 export class CreateUserComponent {
   hide: boolean = true;
+  loading: boolean;
 
+  //TODO: implementar validação de duas etapas para senha
   nome = new FormControl('', Validators.required);
   cpfCnpj = new FormControl('', Validators.required);
   email = new FormControl('', [Validators.required, Validators.email]);
@@ -37,38 +36,25 @@ export class CreateUserComponent {
     confirmarSenha: this.confirmarSenha,
   });
 
-  constructor() {}
+  constructor(
+    private authService: AuthService,
+    private toastr: ToastrService
+  ) {}
 
   createUser() {
-    console.log(this.email);
-
-  }
-
-  verifyInputPassword(group: FormGroup) {
-    let senha = group.controls.senha.value;
-    let confirmarSenha = group.controls.confirmarSenha.value;
-
-    return senha == confirmarSenha
-      ? null
-      : {
-          notSame: true,
-        };
-  }
-}
-
-export class CustomErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(
-    control: FormControl,
-    form: FormGroupDirective | NgForm
-  ): boolean {
-    const invalidCtrl = !!(control && control.invalid && control.parent.dirty);
-    const invalidParent = !!(
-      control &&
-      control.parent &&
-      control.parent.invalid &&
-      control.parent.dirty
+    this.loading = true;
+    this.authService.createUser(this.formNewUser.value).subscribe(
+      () => {
+        this.toastr.success('Sucesso!', 'Usuário criado');
+        this.loading = false;
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err);
+        this.toastr.error('Erro!', 'Não foi possível realizar o cadastro');
+        this.loading = false;
+      }
     );
-
-    return invalidCtrl || invalidParent;
   }
+
+  verifyInputPassword(group: FormGroup) {}
 }
