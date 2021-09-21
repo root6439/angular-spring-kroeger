@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kroeger-website';
+
+  listMenus: string[] = [
+    "Início",
+    "Serviços",
+    "Contratar agora",
+    "Sobre nós",
+    "Dúvidas frequentes"
+  ]
 }

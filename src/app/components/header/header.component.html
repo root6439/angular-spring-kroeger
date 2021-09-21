@@ -1,29 +1,41 @@
-<mat-toolbar color="accent">
-  <mat-toolbar-row>
-    <div>
-      <span>Kroeger - Treinamento e Consultoria</span>
-    </div>
+<div class="row">
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <div>
+        <span>Kroeger - Treinamento e Consultoria</span>
+      </div>
 
-    <div *ngIf="larguraDaTela > 600" style="margin-left: auto;">
-      <button mat-button aria-label="Example icon-button with heart icon">
-        Início
-      </button>
+      <div *ngIf="larguraDaTela < 600; else menus">
+        <button
+          mat-icon-button
+          color="accent"
+          aria-label="Example icon button with a menu icon"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
 
-      <button mat-button aria-label="Example icon-button with heart icon">
-        Serviços
-      </button>
+      <ng-template #menus style="margin-left: auto">
+        <button mat-button aria-label="Example icon-button with heart icon">
+          Início
+        </button>
 
-      <button mat-button aria-label="Example icon-button with heart icon">
-        Contratar agora
-      </button>
+        <button mat-button aria-label="Example icon-button with heart icon">
+          Serviços
+        </button>
 
-      <button mat-button aria-label="Example icon-button with heart icon">
-        Sobre nós
-      </button>
+        <button mat-button aria-label="Example icon-button with heart icon">
+          Contratar agora
+        </button>
 
-      <button mat-button aria-label="Example icon-button with heart icon">
-        Dúvidas frequentes
-      </button>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+        <button mat-button aria-label="Example icon-button with heart icon">
+          Sobre nós
+        </button>
+
+        <button mat-button aria-label="Example icon-button with heart icon">
+          Dúvidas frequentes
+        </button>
+      </ng-template>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

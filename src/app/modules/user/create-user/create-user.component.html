@@ -8,7 +8,7 @@
         <form (ngSubmit)="createUser()" [formGroup]="formNewUser">
           <div class="row form-group">
             <div class="col-sm-6">
-              <mat-form-field appearance="fill">
+              <mat-form-field>
                 <mat-label>Nome completo</mat-label>
                 <input matInput color="accent" formControlName="nome" />
                 <mat-error *ngIf="nome.invalid"> Campo obrigatório </mat-error>
@@ -16,7 +16,7 @@
             </div>
 
             <div class="col-sm-6">
-              <mat-form-field appearance="fill">
+              <mat-form-field>
                 <mat-label>CPF ou CNPJ</mat-label>
                 <input matInput formControlName="cpfCnpj" />
                 <mat-error *ngIf="cpfCnpj.invalid">
@@ -30,7 +30,7 @@
 
           <div class="row">
             <div class="col-sm-6">
-              <mat-form-field appearance="fill">
+              <mat-form-field>
                 <mat-label>E-mail</mat-label>
                 <input matInput formControlName="email" />
                 <mat-error *ngIf="email.errors?.required">
@@ -41,7 +41,7 @@
             </div>
 
             <div class="col-sm-6">
-              <mat-form-field appearance="fill">
+              <mat-form-field>
                 <mat-label>Telefone</mat-label>
                 <input matInput formControlName="telefone" />
                 <mat-error *ngIf="telefone.invalid">
@@ -53,7 +53,7 @@
 
           <div class="row">
             <div class="col-sm-4">
-              <mat-form-field appearance="fill">
+              <mat-form-field>
                 <mat-label>Nome de usuário</mat-label>
                 <input type="text" matInput formControlName="nomeDeUsuario" />
                 <mat-error *ngIf="nomeDeUsuario.invalid">
@@ -63,10 +63,19 @@
             </div>
 
             <div class="col-sm-4">
-              <mat-form-field appearance="fill">
+              <mat-form-field>
                 <mat-label>Senha</mat-label>
-                <input matInput formControlName="senha" [type]="hide ? 'password' : 'text'" />
-                <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                <input
+                  matInput
+                  formControlName="senha"
+                  [type]="hide ? 'password' : 'text'"
+                />
+                <button
+                  type="button"
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                >
                   <mat-icon>{{
                     hide ? "visibility_off" : "visibility"
                   }}</mat-icon>
@@ -81,10 +90,19 @@
             </div>
 
             <div class="col-sm-4">
-              <mat-form-field appearance="fill">
+              <mat-form-field>
                 <mat-label>Confirmar senha</mat-label>
-                <input [type]="hide ? 'password' : 'text'" matInput formControlName="confirmarSenha" />
-                <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                <input
+                  [type]="hide ? 'password' : 'text'"
+                  matInput
+                  formControlName="confirmarSenha"
+                />
+                <button
+                  type="button"
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                >
                   <mat-icon>{{
                     hide ? "visibility_off" : "visibility"
                   }}</mat-icon>
@@ -97,7 +115,12 @@
           </div>
 
           <div *ngIf="loading != true; else spinner">
-            <button mat-raised-button color="accent" type="submit" [disabled]="formNewUser.invalid">
+            <button
+              mat-raised-button
+              color="accent"
+              type="submit"
+              [disabled]="formNewUser.invalid"
+            >
               Criar usuário
             </button>
             <button mat-raised-button>Cancelar</button>

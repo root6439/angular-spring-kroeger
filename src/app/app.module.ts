@@ -20,9 +20,17 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HomeComponent } from './components/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { BuyProductComponent } from './components/buy-product/buy-product.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, BuyProductComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    BuyProductComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -35,6 +43,8 @@ import { BuyProductComponent } from './components/buy-product/buy-product.compon
     HttpClientModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [AuthService, ProductsService],
   bootstrap: [AppComponent],

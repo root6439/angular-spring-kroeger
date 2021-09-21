@@ -1,5 +1,19 @@
-<div class="container-fluid">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
+<div class="container-lg">
+  <mat-sidenav-container
+    (backdropClick)="sidenav.close()"
+  >
+    <mat-sidenav #sidenav (keydown.escape)="sidenav.close()" disableClose>
+      <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let menu of listMenus">
+          {{ menu }}
+        </mat-list-option>
+      </mat-selection-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
