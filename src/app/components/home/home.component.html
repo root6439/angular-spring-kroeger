@@ -1,26 +1,28 @@
-<div class="row my-4">
-  <div class="col-sm-4" *ngFor="let product of products | async">
-    <mat-card class="card-servico">
-      <mat-card-header>
-        <mat-card-title class="text-center">
-          {{ product.title }}
-        </mat-card-title>
-      </mat-card-header>
-      <img
-        src="\assets\images\servico1.jpeg"
-        alt=""
-        class="rounded mx-auto d-block"
-      />
-      <mat-card-content class="mt-1">
-        {{ product.description }}
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-flat-button color="accent" class="button-large">
-          <mat-icon>assignment_turned_in</mat-icon>
-          Contratar agora
-        </button>
-        <h2 class="text-center">{{ product.price | currency: "BRL" }}</h2>
-      </mat-card-actions>
-    </mat-card>
+<div class="container-lg">
+  <div class="row my-4">
+    <div class="col-sm-4" *ngFor="let product of products | async">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="text-center">
+            {{ product.title }}
+          </mat-card-title>
+        </mat-card-header>
+        <img
+          src="\assets\images\servico1.jpeg"
+          alt=""
+          class="rounded mx-auto d-block img-fluid"
+        />
+        <mat-card-content class="mt-1">
+          {{ product.description }}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-flat-button color="accent" class="button-large">
+            <mat-icon>assignment_turned_in</mat-icon>
+            Contratar agora
+          </button>
+          <h2 class="text-center">{{ product.price | currency: "BRL" }}</h2>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </div>

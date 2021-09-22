@@ -1,119 +1,115 @@
-<div class="container my-5">
-  <div class="d-flex justify-content-center">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Cadastro de usuário</mat-card-title>
-      </mat-card-header>
-      <mat-card-content class="d-flex justify-content-center">
-        <form [formGroup]="formNewUser">
-          <div class="row form-group">
-            <div class="col-sm-6">
-              <mat-form-field>
-                <mat-label>Nome completo</mat-label>
-                <input matInput color="accent" formControlName="nome" />
-                <mat-error *ngIf="nome.invalid"> Campo obrigatório </mat-error>
-              </mat-form-field>
-            </div>
-
-            <div class="col-sm-6">
-              <mat-form-field>
-                <mat-label>CPF ou CNPJ</mat-label>
-                <input matInput formControlName="cpfCnpj" />
-                <mat-error *ngIf="cpfCnpj.invalid">
-                  Campo obrigatório
-                </mat-error>
-
-                <!-- TODO: implementar verificação de cpf e mensagem de erro caso seja invpalido -->
-              </mat-form-field>
-            </div>
+<div class="container-sm my-5">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastro de usuário</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="d-flex justify-content-center">
+      <form [formGroup]="formNewUser">
+        <div class="row">
+          <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>Nome completo</mat-label>
+              <input matInput color="accent" formControlName="nome" />
+              <mat-error *ngIf="nome.invalid"> Campo obrigatório </mat-error>
+            </mat-form-field>
           </div>
 
-          <div class="row">
-            <div class="col-sm-6">
-              <mat-form-field>
-                <mat-label>E-mail</mat-label>
-                <input matInput formControlName="email" />
-                <mat-error *ngIf="email.errors?.required">
-                  Campo obrigatório
-                </mat-error>
-                <mat-error *ngIf="email.invalid"> Email inválido </mat-error>
-              </mat-form-field>
-            </div>
+          <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>CPF ou CNPJ</mat-label>
+              <input matInput formControlName="cpfCnpj" />
+              <mat-error *ngIf="cpfCnpj.invalid"> Campo obrigatório </mat-error>
 
-            <div class="col-sm-6">
-              <mat-form-field>
-                <mat-label>Telefone</mat-label>
-                <input matInput formControlName="telefone" />
-                <mat-error *ngIf="telefone.invalid">
-                  Campo obrigatório
-                </mat-error>
-              </mat-form-field>
-            </div>
+              <!-- TODO: implementar verificação de cpf e mensagem de erro caso seja invpalido -->
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>E-mail</mat-label>
+              <input matInput formControlName="email" />
+              <mat-error *ngIf="email.errors?.required">
+                Campo obrigatório
+              </mat-error>
+              <mat-error *ngIf="email.invalid"> Email inválido </mat-error>
+            </mat-form-field>
           </div>
 
-          <div class="row">
-            <div class="col-sm-4">
-              <mat-form-field>
-                <mat-label>Nome de usuário</mat-label>
-                <input type="text" matInput formControlName="nomeDeUsuario" />
-                <mat-error *ngIf="nomeDeUsuario.invalid">
-                  Campo obrigatório
-                </mat-error>
-              </mat-form-field>
-            </div>
+          <div class="col-sm-6">
+            <mat-form-field>
+              <mat-label>Telefone</mat-label>
+              <input matInput formControlName="telefone" />
+              <mat-error *ngIf="telefone.invalid">
+                Campo obrigatório
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
 
-            <div class="col-sm-4">
-              <mat-form-field>
-                <mat-label>Senha</mat-label>
-                <input
-                  matInput
-                  formControlName="senha"
-                  [type]="hide ? 'password' : 'text'"
-                />
-                <button
-                  type="button"
-                  mat-icon-button
-                  matSuffix
-                  (click)="hide = !hide"
-                >
-                  <mat-icon>{{
-                    hide ? "visibility_off" : "visibility"
-                  }}</mat-icon>
-                </button>
-                <mat-error *ngIf="senha.errors?.required">
-                  Obrigatório informar uma senha
-                </mat-error>
-                <mat-error *ngIf="senha.errors?.minlength">
-                  A senha deve ter no mínimo 6 caracteres
-                </mat-error>
-              </mat-form-field>
-            </div>
-
-            <div class="col-sm-4">
-              <mat-form-field>
-                <mat-label>Confirmar senha</mat-label>
-                <input
-                  [type]="hide ? 'password' : 'text'"
-                  matInput
-                  formControlName="confirmarSenha"
-                />
-                <button
-                  type="button"
-                  mat-icon-button
-                  matSuffix
-                  (click)="hide = !hide"
-                >
-                  <mat-icon>{{
-                    hide ? "visibility_off" : "visibility"
-                  }}</mat-icon>
-                </button>
-                <mat-error *ngIf="confirmarSenha">
-                  Campo obrigatório
-                </mat-error>
-              </mat-form-field>
-            </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <mat-form-field>
+              <mat-label>Nome de usuário</mat-label>
+              <input type="text" matInput formControlName="nomeDeUsuario" />
+              <mat-error *ngIf="nomeDeUsuario.invalid">
+                Campo obrigatório
+              </mat-error>
+            </mat-form-field>
           </div>
 
+          <div class="col-sm-4">
+            <mat-form-field>
+              <mat-label>Senha</mat-label>
+              <input
+                matInput
+                formControlName="senha"
+                [type]="hide ? 'password' : 'text'"
+              />
+              <button
+                type="button"
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+              <mat-error *ngIf="senha.errors?.required">
+                Obrigatório informar uma senha
+              </mat-error>
+              <mat-error *ngIf="senha.errors?.minlength">
+                A senha deve ter no mínimo 6 caracteres
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="col-sm-4">
+            <mat-form-field>
+              <mat-label>Confirmar senha</mat-label>
+              <input
+                [type]="hide ? 'password' : 'text'"
+                matInput
+                formControlName="confirmarSenha"
+              />
+              <button
+                type="button"
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+              <mat-error *ngIf="confirmarSenha"> Campo obrigatório </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
           <div *ngIf="loading != true; else spinner">
             <button
               mat-raised-button
@@ -129,8 +125,8 @@
           <ng-template #spinner>
             <mat-spinner color="accent" diameter="35"></mat-spinner>
           </ng-template>
-        </form>
-      </mat-card-content>
-    </mat-card>
-  </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>

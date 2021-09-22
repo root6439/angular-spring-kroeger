@@ -11,7 +11,7 @@ import { retry } from 'rxjs/internal/operators/retry';
 export class ProductsService {
   constructor(private http: HttpClient) {}
 
-  // getProducts(): Observable<IProduct[]> {
-  //   return this.http.get<IProduct[]>(`${URL_API}/products`).pipe(retry(3));
-  // }
+  getProducts(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(`${URL_API}/products`).pipe(retry(3));
+  }
 }

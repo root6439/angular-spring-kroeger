@@ -13,11 +13,11 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  // createUser(user: IUser): Observable<number> {
-  //   return this.http.post<number>(
-  //     `${URL_API}/users`,
-  //     JSON.stringify(user),
-  //     HTTP_OPTIONS
-  //   );
-  // }
+  createUser(user: IUser): Observable<number> {
+    return this.http.post<number>(
+      `${URL_API}/users`,
+      JSON.stringify(user),
+      HTTP_OPTIONS
+    );
+  }
 }

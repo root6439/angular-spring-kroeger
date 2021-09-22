@@ -22,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BuyProductComponent } from './components/buy-product/buy-product.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { CartService } from './components/services/cart/cart.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatListModule,
   ],
-  providers: [AuthService, ProductsService],
+  providers: [AuthService, ProductsService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
