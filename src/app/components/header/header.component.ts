@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { IUser } from './../../shared/models/User.model';
+import { AuthService } from './../../modules/user/auth.service';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +13,13 @@ export class HeaderComponent {
 
   larguraDaTela: number = window.screen.width;
 
+  constructor(public authService: AuthService) {}
+
   openMenu(): void {
     this.clickMenu.emit();
+  }
+
+  teste() {
+    console.log(this.authService);
   }
 }

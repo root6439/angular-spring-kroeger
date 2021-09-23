@@ -10,13 +10,12 @@
       "password": "1234567"
     },
     {
-      "nome": "Caroline Kroeger",
+      "name": "Caroline Kroeger",
       "cpfCnpj": "10294668900",
       "email": "caroline.kroeger@gmail.com",
-      "telefone": "48991875710",
-      "nomeDeUsuario": "kgcarol",
-      "senha": "1234567",
-      "confirmarSenha": "1234567",
+      "phone": "48991875710",
+      "username": "kgcarol",
+      "password": "1234567",
       "id": 9
     }
   ],
@@ -25,21 +24,21 @@
       "id": 1,
       "title": "Consultoria para empresas",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue ex, pellentesque non diam quis, vehicula consequat dui. Etiam eleifend tortor ac orci aliquam tristique. ",
-      "price": 499.00,
+      "price": 499.0,
       "urlImage": "./src/assets/images/servico1.jpeg"
     },
     {
       "id": 2,
       "title": "Treinamento pessoal",
       "description": "Este serviço tem foco no desenvolvimento pessoal, aplica-se a pessoas que queiram aprender coisas novas bla bla",
-      "price": 349.00,
+      "price": 349.0,
       "urlImage": "./src/assets/images/servico2.jpeg"
     },
     {
       "id": 3,
       "title": "Treinamento coletivo",
       "description": "Treinamento para várias pessoas com duração de 6 meses bla bla bla",
-      "price": 899.00,
+      "price": 899.0,
       "urlImage": "./src/assets/images/servico3.jpeg"
     }
   ]

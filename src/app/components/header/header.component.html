@@ -1,4 +1,4 @@
-<div class="container-lg">
+<div class="container-fluid mb-4">
   <div class="row">
     <mat-toolbar color="accent">
       <mat-toolbar-row>
@@ -9,18 +9,32 @@
         </div>
 
         <div>
-          <span>Kroeger - Treinamento e Consultoria</span>
+          <span>Papelaria Kroeger</span>
         </div>
 
         <div *ngIf="larguraDaTela > 600" style="margin-left: auto">
-          <button mat-button>Início</button>
+          <button mat-button (click)="teste()">Início</button>
 
           <button mat-button>Serviços</button>
 
           <button mat-button>Sobre nós</button>
 
-          <button mat-icon-button class="icon-cart">
+          <button
+            mat-icon-button
+            class="icon-circle"
+            routerLink="cart"
+            *ngIf="authService.currentUser"
+          >
             <mat-icon>shopping_cart</mat-icon>
+          </button>
+
+          <button
+            mat-icon-button
+            class="icon-circle"
+            routerLink="user/login"
+            *ngIf="!authService.currentUser"
+          >
+            <mat-icon>person</mat-icon>
           </button>
         </div>
       </mat-toolbar-row>

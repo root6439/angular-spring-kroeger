@@ -2,7 +2,7 @@ import { HTTP_OPTIONS } from './../../shared/options';
 import { URL_API } from './../../shared/url';
 import { IUser } from './../../shared/models/User.model';
 import { Injectable } from '@angular/core';
-import { interval, Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -18,6 +18,14 @@ export class AuthService {
       `${URL_API}/users`,
       JSON.stringify(user),
       HTTP_OPTIONS
+    );
+  }
+
+  //isto será refeito depois, por enquanto só para testes
+  //TODO: ajustar método para retornar somente um usuário
+  login(username: string, password: string): Observable<IUser[]> {
+    return this.http.get<IUser[]>(
+      `${URL_API}/users?username=${username}&password=${password}`
     );
   }
 }

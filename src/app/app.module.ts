@@ -19,19 +19,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HomeComponent } from './components/home/home.component';
 import { MatCardModule } from '@angular/material/card';
-import { BuyProductComponent } from './components/buy-product/buy-product.component';
+
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CartService } from './components/services/cart/cart.service';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    BuyProductComponent,
-  ],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, CartComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
