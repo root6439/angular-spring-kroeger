@@ -24,9 +24,21 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CartService } from './components/services/cart/cart.service';
 import { CartComponent } from './components/cart/cart.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CardFormShopComponent } from './shared/card-form-shop/card-form-shop.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, CartComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    CartComponent,
+    CardFormShopComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -41,6 +53,10 @@ import { CartComponent } from './components/cart/cart.component';
     MatCardModule,
     MatSidenavModule,
     MatListModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [AuthService, ProductsService, CartService],
   bootstrap: [AppComponent],

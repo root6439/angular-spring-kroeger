@@ -1,0 +1,27 @@
+<div class="container-sm">
+  <div class="row d-flex align-items-center">
+    <div class="col-sm-4">
+      <img src="/assets/images/servico1.jpeg" alt="" class="img-fluid" />
+    </div>
+
+    <div class="col-sm-6">
+      <div class="row">
+        <h2>
+          {{ title }}
+        </h2>
+      </div>
+      <div class="row">
+        {{ description }}
+      </div>
+      <br />
+      <div class="row">Valor unitário: {{ price | currency: "BRL" }}</div>
+      <div class="row">Quantidade: {{ quantity }}</div>
+    </div>
+
+    <div class="col-sm-2">
+      <span class="success">
+        Valor total: {{ price * quantity | currency: "BRL" }}
+      </span>
+    </div>
+  </div>
+</div>
