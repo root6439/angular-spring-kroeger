@@ -1,3 +1,5 @@
+import { CartService } from './../services/cart/cart.service';
+import { Estado, ESTADOS } from './../../shared/data';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from './../../modules/user/auth.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -33,19 +35,46 @@ export class CartComponent {
     Validators.required
   );
 
+  // client address
+  cep = new FormControl('', Validators.required);
+  state = new FormControl('', Validators.required);
+  city = new FormControl('', Validators.required);
+  district = new FormControl('', Validators.required);
+  street = new FormControl('', Validators.required);
+  number = new FormControl('', Validators.required);
+  complement = new FormControl('', Validators.required);
+
   formCart = new FormGroup({
     name: this.name,
     cpfCnpj: this.cpfCnpj,
     email: this.email,
     phone: this.phone,
-    birthday: this.birthday
+    birthday: this.birthday,
+    cep: this.cep,
+    state: this.state,
+    city: this.city,
+    district: this.district,
+    street: this.street,
+    number: this.number,
+    complement: this.complement,
   });
 
   step = 0;
 
-  constructor(public authService: AuthService) {}
+  estados: Estado[] = ESTADOS;
 
-  ngOnInit(): void {}
+  constructor(
+    public authService: AuthService,
+    public cartService: CartService
+  ) {}
+
+  ngOnInit(): void {
+    this.formCart.controls['name'].disable();
+    this.formCart.controls['cpfCnpj'].disable();
+    this.formCart.controls['birthday'].disable();
+    this.formCart.controls['email'].disable();
+    this.formCart.controls['phone'].disable();
+  }
 
   setStep(index: number) {
     this.step = index;

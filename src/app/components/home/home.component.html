@@ -16,7 +16,7 @@
           {{ product.description }}
         </mat-card-content>
         <mat-card-actions>
-          <button mat-flat-button color="accent" class="button-large">
+          <button mat-flat-button color="accent" class="button-large" (click)="addItem(product)">
             <mat-icon>assignment_turned_in</mat-icon>
             Contratar agora
           </button>

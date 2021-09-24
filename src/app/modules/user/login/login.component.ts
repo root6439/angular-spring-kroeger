@@ -1,3 +1,4 @@
+import { CartService } from './../../../components/services/cart/cart.service';
 import { IUser } from './../../../shared/models/User.model';
 import { AuthService } from './../auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -27,7 +28,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {}
@@ -41,6 +43,11 @@ export class LoginComponent implements OnInit {
           this.toastr.success('Sucesso!', 'Login realizado!');
           this.authService.currentUser = resp[0];
           this.router.navigate(['/products']);
+          this.cartService.shop = {
+            user: this.authService.currentUser,
+            products: [],
+            date: new Date(),
+          };
         } else {
           this.toastr.error('Erro!', 'Login ou senha incorretos!');
         }

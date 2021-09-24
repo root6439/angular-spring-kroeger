@@ -29,6 +29,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CardFormShopComponent } from './shared/card-form-shop/card-form-shop.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { CardFormShopComponent } from './shared/card-form-shop/card-form-shop.co
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatSelectModule,
   ],
   providers: [AuthService, ProductsService, CartService],
   bootstrap: [AppComponent],

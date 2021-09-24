@@ -1,6 +1,11 @@
 import { AuthService } from './../auth.service';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -54,6 +59,4 @@ export class CreateUserComponent {
   //     }
   //   );
   // }
-
-  verifyInputPassword(group: FormGroup) {}
 }
