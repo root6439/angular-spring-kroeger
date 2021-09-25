@@ -7,7 +7,8 @@
       "email": "nicolas.soaresh.98@gmail.com",
       "phone": "48984689248",
       "username": "root6439",
-      "password": "1234567"
+      "password": "1234567",
+      "admin": true
     },
     {
       "name": "Caroline Kroeger",
@@ -16,7 +17,8 @@
       "phone": "48991875710",
       "username": "kgcarol",
       "password": "1234567",
-      "id": 9
+      "id": 9,
+      "admin": false
     }
   ],
   "products": [

@@ -6,5 +6,6 @@ export interface IUser {
   phone: string;
   username: string;
   password: string;
-  birthday: string
+  birthday: string;
+  admin: boolean;
 }

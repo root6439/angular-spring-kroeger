@@ -10,7 +10,11 @@
           <div class="col-sm-5">
             <mat-form-field appearance="legacy">
               <mat-label>Nome de usuário</mat-label>
-              <input matInput formControlName="username" />
+              <input
+                matInput
+                formControlName="username"
+                autocomplete="username"
+              />
               <mat-error *ngIf="username.errors?.required"
                 >Campo obrigatório</mat-error
               >
@@ -26,6 +30,7 @@
                 matInput
                 formControlName="password"
                 [type]="hide ? 'text' : 'password'"
+                autocomplete="password"
               />
               <button
                 type="button"

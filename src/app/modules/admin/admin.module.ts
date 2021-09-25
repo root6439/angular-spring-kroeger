@@ -1,15 +1,21 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponentComponent } from './admin-component/admin-component.component';
-
-
+import { ShopsComponent } from './shops/shops.component';
+import { ItemsComponent } from './items/items.component';
+import { ROUTES } from './admin.routes';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    AdminComponentComponent
-  ],
+  declarations: [ShopsComponent, ItemsComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule.forChild(ROUTES),
+    MatTableModule,
+    MatPaginatorModule,
+    MatButtonModule,
+  ],
 })
-export class AdminModule { }
+export class AdminModule {}

@@ -11,25 +11,12 @@ export class AppComponent {
 
   title = 'kroeger-website';
 
-  listMenus: string[] = [
-    'Início',
-    'Serviços',
-    'Contratar agora',
-    'Sobre nós',
-    'Dúvidas frequentes',
-    'Meu carrinho',
+  listMenus: any[] = [
+    { title: 'Início', path: '' },
+    { title: 'Serviços', path: '' },
+    { title: 'Sobre nós', path: ' ' },
+    { title: 'Meu carrinho', path: 'cart' },
   ];
 
-  ngOnInit() {
-    this.authService.currentUser = {
-      id: 1,
-      name: 'name',
-      email: 'email',
-      cpfCnpj: 'cpfCnpj',
-      phone: 'phone',
-      username: 'username',
-      password: 'password',
-      birthday: new Date().toLocaleDateString()
-    };
-  }
+  ngOnInit() {}
 }

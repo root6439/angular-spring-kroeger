@@ -2,8 +2,7 @@ import { CartService } from './../services/cart/cart.service';
 import { Estado, ESTADOS } from './../../shared/data';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from './../../modules/user/auth.service';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatAccordion } from '@angular/material/expansion';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +10,6 @@ import { MatAccordion } from '@angular/material/expansion';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-  @ViewChild(MatAccordion) accordion: MatAccordion;
 
   // user data
   name = new FormControl(
