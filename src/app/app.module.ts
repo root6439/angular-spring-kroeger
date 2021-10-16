@@ -1,12 +1,11 @@
-import { ProductsService } from './components/services/products/products.service';
 import { AuthService } from './modules/user/auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
@@ -17,19 +16,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { MatCardModule } from '@angular/material/card';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { CartService } from './components/services/cart/cart.service';
-import { CartComponent } from './components/cart/cart.component';
+import { CartService } from './modules/shop/cart/cart.service';
+import { CartComponent } from './modules/shop/cart/cart.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CardFormShopComponent } from './shared/card-form-shop/card-form-shop.component';
 import { MatSelectModule } from '@angular/material/select';
+import { ProductService } from './modules/product/product.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,7 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatSelectModule,
   ],
-  providers: [AuthService, ProductsService, CartService],
+  providers: [AuthService, ProductService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

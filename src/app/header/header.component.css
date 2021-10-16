@@ -1,0 +1,9 @@
+.icon-circle {
+  border: 1px solid white !important;
+}
+
+.header {
+  display: block;
+  position: fixed;
+  z-index: 2;
+}

@@ -1,5 +1,5 @@
-import { CartComponent } from './components/cart/cart.component';
-import { HomeComponent } from './components/home/home.component';
+import { CartComponent } from './modules/shop/cart/cart.component';
+import { HomeComponent } from './home/home.component';
 
 import { Routes } from '@angular/router';
 

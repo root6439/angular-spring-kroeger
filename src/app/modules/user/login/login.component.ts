@@ -1,4 +1,4 @@
-import { CartService } from './../../../components/services/cart/cart.service';
+import { CartService } from '../../shop/cart/cart.service';
 import { IUser } from './../../../shared/models/User.model';
 import { AuthService } from './../auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';

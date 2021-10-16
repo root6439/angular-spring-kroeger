@@ -1,7 +1,7 @@
-import { CartService } from './../services/cart/cart.service';
-import { Estado, ESTADOS } from './../../shared/data';
+import { CartService } from './cart.service';
+import { Estado, ESTADOS } from '../../../shared/data';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from './../../modules/user/auth.service';
+import { AuthService } from '../../user/auth.service';
 import { Component } from '@angular/core';
 
 @Component({

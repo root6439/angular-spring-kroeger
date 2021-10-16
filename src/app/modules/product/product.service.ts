@@ -1,14 +1,14 @@
-import { URL_API } from './../../../shared/url';
+import { retry } from 'rxjs/internal/operators/retry';
+import { URL_API } from './../../shared/url';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IProduct } from 'src/app/shared/models/Products.model';
-import { retry } from 'rxjs/internal/operators/retry';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProductsService {
+export class ProductService {
   constructor(private http: HttpClient) {}
 
   getProducts(): Observable<IProduct[]> {

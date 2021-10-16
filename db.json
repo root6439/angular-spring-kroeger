@@ -42,6 +42,55 @@
       "description": "Treinamento para várias pessoas com duração de 6 meses bla bla bla",
       "price": 899.0,
       "urlImage": "./src/assets/images/servico3.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Consultoria para empresas",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue ex, pellentesque non diam quis, vehicula consequat dui. Etiam eleifend tortor ac orci aliquam tristique. ",
+      "price": 499.0,
+      "urlImage": "./src/assets/images/servico1.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Treinamento pessoal",
+      "description": "Este serviço tem foco no desenvolvimento pessoal, aplica-se a pessoas que queiram aprender coisas novas bla bla",
+      "price": 349.0,
+      "urlImage": "./src/assets/images/servico2.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "Treinamento coletivo",
+      "description": "Treinamento para várias pessoas com duração de 6 meses bla bla bla",
+      "price": 899.0,
+      "urlImage": "./src/assets/images/servico3.jpeg"
+    },
+    {
+      "id": 7,
+      "title": "Consultoria para empresas",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue ex, pellentesque non diam quis, vehicula consequat dui. Etiam eleifend tortor ac orci aliquam tristique. ",
+      "price": 499.0,
+      "urlImage": "./src/assets/images/servico1.jpeg"
+    },
+    {
+      "id": 8,
+      "title": "Treinamento pessoal",
+      "description": "Este serviço tem foco no desenvolvimento pessoal, aplica-se a pessoas que queiram aprender coisas novas bla bla",
+      "price": 349.0,
+      "urlImage": "./src/assets/images/servico2.jpeg"
+    },
+    {
+      "id": 9,
+      "title": "Treinamento coletivo",
+      "description": "Treinamento para várias pessoas com duração de 6 meses bla bla bla",
+      "price": 899.0,
+      "urlImage": "./src/assets/images/servico3.jpeg"
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "product": 1,
+      "quantity": 10
     }
   ]
 }

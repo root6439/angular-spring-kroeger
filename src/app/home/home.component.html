@@ -1,0 +1,78 @@
+<!-- <div class="container-lg">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let product of products | async">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title class="text-center">
+            {{ product.title }}
+          </mat-card-title>
+        </mat-card-header>
+        <img
+          src="\assets\images\servico1.jpeg"
+          alt=""
+          class="rounded mx-auto d-block img-fluid"
+        />
+        <mat-card-content class="mt-1">
+          {{ product.description }}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-flat-button color="accent" class="button-large" (click)="addItem(product)">
+            <mat-icon>assignment_turned_in</mat-icon>
+            Contratar agora
+          </button>
+          <h2 class="text-center">{{ product.price | currency: "BRL" }}</h2>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-lg">
+  <div
+    id="carouselExampleControls"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="/assets/images/servico1.jpeg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/assets/images/servico2.jpeg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/assets/images/servico3.jpeg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

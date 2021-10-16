@@ -7,6 +7,7 @@ import { ROUTES } from './admin.routes';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [ShopsComponent, ItemsComponent],
@@ -16,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatTableModule,
     MatPaginatorModule,
     MatButtonModule,
+    MatSortModule
   ],
 })
 export class AdminModule {}

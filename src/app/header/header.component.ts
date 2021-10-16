@@ -1,5 +1,5 @@
-import { IUser } from './../../shared/models/User.model';
-import { AuthService } from './../../modules/user/auth.service';
+import { IUser } from '../shared/models/User.model';
+import { AuthService } from '../modules/user/auth.service';
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 
 @Component({

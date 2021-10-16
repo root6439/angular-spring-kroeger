@@ -7,6 +7,6 @@ button {
   margin: 16px 8px;
 }
 
-mat-header-cell, mat-cell {
-  justify-content: center;
+td, th {
+  /* width: 1%; */
 }
