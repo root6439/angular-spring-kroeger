@@ -1,56 +1,48 @@
-<div class="container-fluid header">
-  <div class="row">
-    <mat-toolbar color="accent">
-      <mat-toolbar-row>
-        <div *ngIf="larguraDaTela < 600">
-          <button mat-icon-button color="white" (click)="openMenu()">
-            <mat-icon>menu</mat-icon>
-          </button>
+<mat-toolbar color="accent" class="header">
+  <div class="container-md p-0">
+    <mat-toolbar-row class="p-0">
+
+      <div *ngIf="larguraDaTela < 600">
+        <button mat-icon-button color="white" (click)="openMenu()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+
+      <div class="title">
+        <span>Papelaria Kroeger</span>
+      </div>
+
+      <div *ngIf="larguraDaTela > 600">
+
+        <div *ngIf="!authService.currentUser?.admin; else admin" class="buttons">
+          <button mat-button routerLink="/">Início</button>
+
+          <button mat-button>Serviços</button>
+
+          <button mat-button>Sobre nós</button>
         </div>
 
-        <div>
-          <span>Papelaria Kroeger</span>
-        </div>
+        <ng-template #admin>
+          <button mat-button routerLink="/">Início</button>
 
-        <div *ngIf="larguraDaTela > 600" style="margin-left: auto">
-          <div *ngIf="!authService.currentUser?.admin; else admin">
-            <button mat-button routerLink="/">Início</button>
+          <button mat-button routerLink="admin/shops">Consultar vendas</button>
 
-            <button mat-button>Serviços</button>
+          <button mat-button routerLink="admin/items">Incluir item</button>
+        </ng-template>
+      </div>
 
-            <button mat-button>Sobre nós</button>
-          </div>
 
-          <ng-template #admin>
-            <button mat-button routerLink="/">Início</button>
+      <div class="icon">
+        <button mat-icon-button class="icon-circle" routerLink="cart"
+          *ngIf="authService.currentUser && !authService.currentUser?.admin" routerLink="cart">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
 
-            <button mat-button routerLink="admin/shops">Consultar vendas</button>
+        <button mat-icon-button class="icon-circle" routerLink="user/login" *ngIf="!authService.currentUser">
+          <mat-icon>person</mat-icon>
+        </button>
+      </div>
 
-            <button mat-button routerLink="admin/items">Incluir item</button>
-          </ng-template>
-        </div>
-
-        <div style="margin-left: auto">
-          <button
-            mat-icon-button
-            class="icon-circle"
-            routerLink="cart"
-            *ngIf="authService.currentUser && !authService.currentUser?.admin"
-            routerLink="cart"
-          >
-            <mat-icon>shopping_cart</mat-icon>
-          </button>
-
-          <button
-            mat-icon-button
-            class="icon-circle"
-            routerLink="user/login"
-            *ngIf="!authService.currentUser"
-          >
-            <mat-icon>person</mat-icon>
-          </button>
-        </div>
-      </mat-toolbar-row>
-    </mat-toolbar>
+    </mat-toolbar-row>
   </div>
-</div>
+</mat-toolbar>

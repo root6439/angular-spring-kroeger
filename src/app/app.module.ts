@@ -1,5 +1,9 @@
 import { AuthService } from './modules/user/auth.service';
-import { NgModule } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -16,7 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HomeComponent } from './home/home.component';
+
 import { MatCardModule } from '@angular/material/card';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -30,6 +34,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CardFormShopComponent } from './shared/card-form-shop/card-form-shop.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ProductService } from './modules/product/product.service';
+
+import { HomeComponent } from './home/home.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -59,6 +66,7 @@ import { ProductService } from './modules/product/product.service';
     MatInputModule,
     ReactiveFormsModule,
     MatSelectModule,
+    IvyCarouselModule,
   ],
   providers: [AuthService, ProductService, CartService],
   bootstrap: [AppComponent],

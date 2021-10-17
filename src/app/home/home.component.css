@@ -1,4 +1,20 @@
-.container-lg {
-  padding: 0;
+.carrousel-width {
+  width: 100%;
   margin-top: 50px;
+}
+
+h2 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 17px;
+}
+
+.price-big {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
