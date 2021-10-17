@@ -4,11 +4,15 @@
 
 .header {
   display: flex;
-   position: fixed;
-   z-index: 2;
+  position: fixed;
+  z-index: 2;
 }
 
 .title {
   display: flex;
   flex: 1;
+}
+
+.title>span {
+  cursor: pointer;
 }

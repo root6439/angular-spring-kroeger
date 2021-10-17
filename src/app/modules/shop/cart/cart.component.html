@@ -76,14 +76,14 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
 
-        <div class="row my-2" *ngFor="let product of cartService.shop.products">
+        <!-- <div class="row my-2" *ngFor="let product of cartService.shop.products">
           <card-form-shop
             [title]="product.product.title"
             [description]="product.product.description"
             [price]="product.product.price"
             [quantity]="product.quantity"
           ></card-form-shop>
-        </div>
+        </div> -->
 
         <mat-action-row>
           <button type="button" mat-button color="warn" (click)="prevStep()">

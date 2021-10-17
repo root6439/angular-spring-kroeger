@@ -19,4 +19,12 @@ export const ROUTES: Routes = [
         (module) => module.AdminModule
       ),
   },
+  {
+    path: 'product',
+    loadChildren: () =>
+      import('./modules/product/product.module').then(
+        (module) => module.ProductModule
+      ),
+  },
+  { path: '**', redirectTo: '' },
 ];

@@ -23,9 +23,6 @@ export class HomeComponent implements OnInit {
   }
 
   addItem(product: IProduct) {
-    this.cartService.shop.products.push({
-      product: product,
-      quantity: 1,
-    });
+
   }
 }

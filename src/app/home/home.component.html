@@ -6,7 +6,7 @@
   </div>
 </div> -->
 
-<div class="container-lg my-5 p-0 mb-0">
+<div class="container-md my-5 p-0 mb-0">
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -29,26 +29,27 @@
     </button>
   </div>
 
-  <h2 class="mt-4">Promoções do dia</h2>
+  <h2 class="mt-4">Novidades</h2>
 
-  <carousel class="my-1">
+
+  <carousel class="mt-1" [height]=260 [cellWidth]=250>
     <div class="carousel-cell" *ngFor="let product of products | async">
       <mat-card>
         <mat-card-header>
-          <mat-card-title class="text-center">
+          <mat-card-title>
             <img src="\assets\images\servico1.jpeg" alt="" class="img" />
           </mat-card-title>
         </mat-card-header>
         <p class="title">
           {{ product.title }}
         </p>
-        <mat-card-content class="mt-1">
+        <mat-card-content>
           <p class="price-big">
             {{ product.price | currency:'BRL' }}
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-flat-button color="accent" class="button-large" (click)="addItem(product)">
+          <button mat-flat-button color="accent" (click)="addItem(product)">
             <mat-icon>assignment_turned_in</mat-icon>
             Adicionar ao carrinho
           </button>
@@ -57,5 +58,113 @@
       </mat-card>
     </div>
   </carousel>
+
+  <h2 class="mt-4">Categorias</h2>
+
+  <div class="row">
+
+    <div class="col-md-12">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Material escolar 2021
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <!-- <img src="/assets/images/servico4.jpeg" alt=""> -->
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              Cadernos
+            </p>
+            <mat-selection-list [multiple]="false">
+              <mat-list-option>
+                Papéis de origami
+              </mat-list-option>
+              <mat-list-option>
+                Papéis coloridos
+              </mat-list-option>
+              <mat-list-option>
+                Papéis para desenho
+              </mat-list-option>
+              <mat-list-option>
+                Sem criatividade
+              </mat-list-option>
+            </mat-selection-list>
+          </div>
+          <div class="col-md-4">
+            <p>
+              Cadernos
+            </p>
+            <mat-selection-list [multiple]="false">
+              <mat-list-option>
+                Papéis de origami
+              </mat-list-option>
+              <mat-list-option>
+                Papéis coloridos
+              </mat-list-option>
+              <mat-list-option>
+                Papéis para desenho
+              </mat-list-option>
+              <mat-list-option>
+                Sem criatividade
+              </mat-list-option>
+            </mat-selection-list>
+          </div>
+          <div class="col-md-4">
+            <p>
+              Cadernos
+            </p>
+            <mat-selection-list [multiple]="false">
+              <mat-list-option>
+                Papéis de origami
+              </mat-list-option>
+              <mat-list-option>
+                Papéis coloridos
+              </mat-list-option>
+              <mat-list-option>
+                Papéis para desenho
+              </mat-list-option>
+              <mat-list-option>
+                Sem criatividade
+              </mat-list-option>
+            </mat-selection-list>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </div>
+
+    <h2 class="mt-4">Promoções</h2>
+
+    <carousel class="mt-1" [height]=260 [cellWidth]=250>
+      <div class="carousel-cell" *ngFor="let product of products | async">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              <img src="\assets\images\servico1.jpeg" alt="" class="img" />
+            </mat-card-title>
+          </mat-card-header>
+          <p class="title">
+            {{ product.title }}
+          </p>
+          <mat-card-content>
+            <p class="price-big">
+              {{ product.price | currency:'BRL' }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-flat-button color="accent" [routerLink]="['product/select', product.id]">
+              <mat-icon>assignment_turned_in</mat-icon>
+              Adicionar ao carrinho
+            </button>
+
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </carousel>
+
+
+
+  </div>
 
 </div>

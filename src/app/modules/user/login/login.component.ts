@@ -43,11 +43,6 @@ export class LoginComponent implements OnInit {
           this.toastr.success('Sucesso!', 'Login realizado!');
           this.authService.currentUser = resp[0];
           this.router.navigate(['/products']);
-          this.cartService.shop = {
-            user: this.authService.currentUser,
-            products: [],
-            date: new Date(),
-          };
         } else {
           this.toastr.error('Erro!', 'Login ou senha incorretos!');
         }
